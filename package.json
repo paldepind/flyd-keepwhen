@@ -1,13 +1,13 @@
 {
   "name": "flyd-keepwhen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A keepWhen function for Flyd.",
   "main": "keepwhen.js",
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "flyd": "^0.0.3"
+    "flyd": "0.0.x"
   },
   "devDependencies": {},
   "scripts": {

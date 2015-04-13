@@ -10,9 +10,9 @@ describe('keepWhen', function() {
     var s = stream(1);
     var b = stream(false);
     var k = keepWhen(b, s);
-    flyd.map(k, function(v) {
+    flyd.map(function(v) {
       result.push(v);
-    });
+    }, k);
     s(2);
     b(true);
     s(3)(4);
@@ -27,9 +27,9 @@ describe('keepWhen', function() {
     var s = stream();
     var b = stream(false);
     var k = keepWhen(b, s);
-    flyd.map(k, function(v) {
+    flyd.map(function(v) {
       result.push(v);
-    });
+    }, k);
     b(true)(false)(true);
     s(3)(4);
     assert.deepEqual(result, [3, 4]);
